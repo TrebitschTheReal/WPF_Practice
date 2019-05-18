@@ -10,13 +10,18 @@
         <DockPanel>
             <Menu DockPanel.Dock="Top" Width="auto" VerticalAlignment="Top">
                 <MenuItem Header="_File">
+                    <MenuItem Header="Import" Click="Menu_Import_Click"/>
                     <MenuItem Header="_About"/>
                     <Separator/>
                     <MenuItem Header="_Exit" Click="MenuItem_Click_Exit"/>
                 </MenuItem>
             </Menu>
+            <Button Content="Input" Height="30" VerticalAlignment="Top" HorizontalAlignment="Left" Width="50" Margin="0,20,0,0" Click="Menu_Import_Click"/>
+            <TextBox x:Name="text_input" HorizontalAlignment="Left" Height="30" Margin="0,20,0,0" TextWrapping="Wrap" Text="" TextAlignment="center" VerticalAlignment="Top" Width="50"/>
+            <Label x:Name="label_display" Content="" Width="200" Height="30" VerticalAlignment="top" Margin="0,20,0,0"/>
+
         </DockPanel>
-        
+
     </Grid>
 
 </Window>

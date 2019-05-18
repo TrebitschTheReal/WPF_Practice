@@ -27,11 +27,28 @@ namespace WpfPractice
 
         private void MenuItem_Click_Exit(object sender, RoutedEventArgs e)
         {
-            if(MessageBox.Show("Tuti ki akarsz lépni?", "Gud bai?", MessageBoxButton.YesNo, MessageBoxImage.Question) == MessageBoxResult.Yes)
+            MessageBoxResult result = MessageBox.Show("Tuti ki akarsz lépni?", "Gud bai?", MessageBoxButton.YesNo, MessageBoxImage.Question);
+
+            switch (result)
             {
-                Environment.Exit(0);
+                case MessageBoxResult.Yes:
+                    Environment.Exit(0);
+                    break;
             }
             
+        }
+
+        private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
+
+        private void Menu_Import_Click(object sender, RoutedEventArgs e)
+        {
+            string input = text_input.Text;
+            label_display.Content = input;
+
+
         }
     }
 }
