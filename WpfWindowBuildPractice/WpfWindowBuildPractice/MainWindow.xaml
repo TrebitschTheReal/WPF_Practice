@@ -72,7 +72,7 @@
                 <ComboBoxItem Content="Painted"/>
             </ComboBox>
             <TextBlock Text="Purchase Information"/>
-            <ComboBox Margin="0,2,0,0">
+            <ComboBox  Margin="0,2,0,0" SelectionChanged="ComboBox_SelectionChanged">
                 <ComboBoxItem Content="Rubber"/>
             </ComboBox>
 

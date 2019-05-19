@@ -20,35 +20,27 @@ namespace WpfPractice
     /// </summary>
     public partial class MainWindow : Window
     {
+        CustomerBase costumerBase = new CustomerBase();
+        
+
         public MainWindow()
         {
             InitializeComponent();
         }
 
-        private void MenuItem_Click_Exit(object sender, RoutedEventArgs e)
+        private void Button_Exit_Click(object sender, RoutedEventArgs e)
         {
-            MessageBoxResult result = MessageBox.Show("Tuti ki akarsz lépni?", "Gud bai?", MessageBoxButton.YesNo, MessageBoxImage.Question);
-
-            switch (result)
+            if(MessageBox.Show("Do you want to quit?", "Exit", MessageBoxButton.YesNo, MessageBoxImage.Question) == MessageBoxResult.Yes)
             {
-                case MessageBoxResult.Yes:
-                    Environment.Exit(0);
-                    break;
+                Environment.Exit(0);
             }
-            
         }
 
-        private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
+        private void Button_Add_Customer_Click(object sender, RoutedEventArgs e)
         {
 
-        }
-
-        private void Menu_Import_Click(object sender, RoutedEventArgs e)
-        {
-            string input = text_input.Text;
-            label_display.Content = input;
-
-
+            Customer customer = new Customer(TextBox_Name.Text,int.Parse(TextBox_Age.Text), TextBox_Adress.Text);
+            costumerBase.GenerateCustomerList(customer);
         }
     }
 }

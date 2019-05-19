@@ -5,23 +5,57 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfPractice"
         mc:Ignorable="d"
-        Title="MainWindow" Height="300" Width="600">
-    <Grid>
-        <DockPanel>
-            <Menu DockPanel.Dock="Top" Width="auto" VerticalAlignment="Top">
-                <MenuItem Header="_File">
-                    <MenuItem Header="Import" Click="Menu_Import_Click"/>
-                    <MenuItem Header="_About"/>
-                    <Separator/>
-                    <MenuItem Header="_Exit" Click="MenuItem_Click_Exit"/>
-                </MenuItem>
-            </Menu>
-            <Button Content="Input" Height="30" VerticalAlignment="Top" HorizontalAlignment="Left" Width="50" Margin="0,20,0,0" Click="Menu_Import_Click"/>
-            <TextBox x:Name="text_input" HorizontalAlignment="Left" Height="30" Margin="0,20,0,0" TextWrapping="Wrap" Text="" TextAlignment="center" VerticalAlignment="Top" Width="50"/>
-            <Label x:Name="label_display" Content="" Width="200" Height="30" VerticalAlignment="top" Margin="0,20,0,0"/>
-
-        </DockPanel>
-
-    </Grid>
-
+        Title="Customer" Height="450" Width="300">
+    <Border BorderBrush="LightGray" BorderThickness="10" Padding="10">
+        <StackPanel>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="3*"/>
+                </Grid.ColumnDefinitions>
+                <TextBlock Text="Name: " Padding="3" Grid.Column="0"/>
+                <TextBox x:Name="TextBox_Name" Grid.Column="1" Padding="3"/>
+            </Grid>
+            <Grid Margin="0,10">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="3*"/>
+                </Grid.ColumnDefinitions>
+                <TextBlock Text="Age: " Padding="3" Grid.Column="0"/>
+                <TextBox x:Name="TextBox_Age" Grid.Column="1" Padding="3"/>
+            </Grid>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="2*"/>
+                </Grid.ColumnDefinitions>
+                <TextBlock Text="Home adress: " Padding="3" Grid.Column="0"/>
+                <TextBox x:Name="TextBox_Adress" Grid.Column="1" Padding="3"/>
+            </Grid>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <CheckBox x:Name="Checkbox_Male" Content="Male" Grid.Column="0" Margin="0,10"/>
+                <CheckBox x:Name="CheckBox_Female" Content="Female" Grid.Column="1" Margin="0,10"/>
+            </Grid>
+            <Button x:Name="Button_Add_Customer" Content="Add" Padding="3" BorderThickness="2" Margin="0,10" Click="Button_Add_Customer_Click"/>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Button x:Name="Button_Exit" Content="Exit" Width="auto" Padding="10" Click="Button_Exit_Click"/>
+            </Grid>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                </Grid.RowDefinitions>
+            </Grid>
+        </StackPanel>
+    </Border>
 </Window>
