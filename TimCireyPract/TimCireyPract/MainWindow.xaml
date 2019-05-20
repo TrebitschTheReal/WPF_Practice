@@ -50,9 +50,17 @@
                     Grid.Row="0" Grid.Column="5"
                     BorderThickness="1" BorderBrush="red"
                     Click="Button_Exit_Click"
-                    MouseMove="Button_Exit_MouseMove"
-                    />
+                    MouseMove="Button_Exit_MouseMove"/>
 
+            <ComboBox x:Name="myComboBox" Grid.Column="1" Grid.Row="4" Grid.ColumnSpan="2">
+                <ComboBox.ItemTemplate>
+                    <DataTemplate>
+                        <TextBlock Text="{Binding FullName}"/>
+                    </DataTemplate>
+                </ComboBox.ItemTemplate>
+                
+                
+            </ComboBox>
         </Grid>
     </Border>
 </Window>

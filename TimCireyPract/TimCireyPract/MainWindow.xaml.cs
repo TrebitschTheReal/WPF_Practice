@@ -24,12 +24,15 @@ namespace TimCireyPract
         {
             InitializeComponent();
             button_Exit.Foreground = Brushes.White;
+            var people = new People();
+
+            myComboBox.ItemsSource = people.Crowd;
 
         }
 
         private void Button_Exit_Click (object sender, RoutedEventArgs e)
         {
-            if(MessageBox.Show("Do you really want to quit", "Exit", MessageBoxButton.YesNo, MessageBoxImage.Question) == MessageBoxResult.Yes)
+            if(MessageBox.Show("Do you really want to quit?", "Exit", MessageBoxButton.YesNo, MessageBoxImage.Question) == MessageBoxResult.Yes)
             {
                 Environment.Exit(0);
             }
