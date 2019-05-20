@@ -24,6 +24,7 @@ namespace TimCireyPract
         {
             InitializeComponent();
             button_Exit.Foreground = Brushes.White;
+
         }
 
         private void Button_Exit_Click (object sender, RoutedEventArgs e)
@@ -37,6 +38,11 @@ namespace TimCireyPract
         private void Button_Send_Click(object sender, RoutedEventArgs e)
         {
             MessageBox.Show($"Hello {textBox_FirstName.Text}!","", MessageBoxButton.OK, MessageBoxImage.Information);
+        }
+
+        private void Button_Exit_MouseMove(object sender, MouseEventArgs e)
+        {
+            button_Exit.Foreground = Brushes.White;
         }
     }
 }
