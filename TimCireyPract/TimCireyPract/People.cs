@@ -17,6 +17,7 @@ namespace TimCireyPract
             somePeople.Add(new Person("Karika", "Csapatási"));
         }
 
+
         public List<Person> Crowd { get { return somePeople; } }
     }
 }
