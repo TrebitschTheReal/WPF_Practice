@@ -46,7 +46,7 @@
                     <ColumnDefinition Width="*"/>
                     <ColumnDefinition Width="*"/>
                 </Grid.ColumnDefinitions>
-                <Button x:Name="Button_Exit" Content="Exit" Width="auto" Padding="10" Click="Button_Exit_Click"/>
+                <Button x:Name="Button_Exit" Content="Exit" Width="auto" Padding="10" Click="Button_Exit_Click" BorderThickness="2"/>
             </Grid>
             <Grid>
                 <Grid.RowDefinitions>
@@ -54,8 +54,9 @@
                     <RowDefinition Height="auto"/>
                     <RowDefinition Height="auto"/>
                     <RowDefinition Height="auto"/>
+                    <RowDefinition Height="*"/>
                 </Grid.RowDefinitions>
             </Grid>
         </StackPanel>
     </Border>
-</Window>
+</Window> 

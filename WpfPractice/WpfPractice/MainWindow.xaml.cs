@@ -12,6 +12,8 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Collections.ObjectModel;
+
 
 namespace WpfPractice
 {
@@ -20,11 +22,11 @@ namespace WpfPractice
     /// </summary>
     public partial class MainWindow : Window
     {
-        CustomerBase costumerBase = new CustomerBase();
-        
+        CustomerBase customerBase = new CustomerBase();
 
         public MainWindow()
         {
+            CustomerBase customerBase = new CustomerBase();
             InitializeComponent();
         }
 
@@ -38,9 +40,16 @@ namespace WpfPractice
 
         private void Button_Add_Customer_Click(object sender, RoutedEventArgs e)
         {
+            Customer customer = new Customer(TextBox_Name.Text, int.Parse(TextBox_Age.Text), TextBox_Adress.Text);
+            customerBase.GenerateCustomerList(customer);
+            ClearButtonContent();
 
-            Customer customer = new Customer(TextBox_Name.Text,int.Parse(TextBox_Age.Text), TextBox_Adress.Text);
-            costumerBase.GenerateCustomerList(customer);
+        }
+        private void ClearButtonContent()
+        {
+            TextBox_Name.Clear();
+            TextBox_Age.Clear();
+            TextBox_Adress.Clear();
         }
     }
 }

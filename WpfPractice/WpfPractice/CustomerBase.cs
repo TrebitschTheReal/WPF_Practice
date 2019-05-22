@@ -3,19 +3,20 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Collections.ObjectModel;
 
 namespace WpfPractice
 {
     class CustomerBase
     {
-        private List<Customer> allCustomers = new List<Customer>();
+        private ObservableCollection<Customer> allCustomers = new ObservableCollection<Customer>();
 
         public CustomerBase()
         {
 
         }
 
-        public List<Customer> AllCustomers
+        public ObservableCollection<Customer> AllCustomers
         {
             get { return allCustomers; }
         }
